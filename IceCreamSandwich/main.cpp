@@ -33,7 +33,7 @@ bool areAllCharsSameInMiddle(string middle) {
  * @return int Number of matches with previous characters
  */
 int getIndexOfStart(string value, string strOfStart, int indexOfStart) {
-    for (unsigned i = 0; i <= value.length(); i++) {
+    for (unsigned i = 0; i <= value.length() - 1; i++) {
         strOfStart += value[i];
         if (strOfStart[strOfStart.length() - 1] == value[i + 1]) {
             indexOfStart += 1;
@@ -109,6 +109,6 @@ bool areAllCharsSame(string value) {
  */
 int main()
 {
-    cout << boolalpha << areAllCharsSame("AdA") << endl;
+    cout << boolalpha << areAllCharsSame("") << endl;
     return 0;
 }
